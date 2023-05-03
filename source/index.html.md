@@ -131,9 +131,16 @@ curl "https://api.emmi.io/api/public/funds/1/metrics" \
     "scope2": 8000.0,
     "scope3": 5000000.0
   },
-  "emmi_score": 93.0,
-  "temperature_alignment": 1.5,
-  "carbon_intensity": 105
+  "carbon_intensity": 105,
+  "2022_temp_alignment": "3.58",
+  "2030_temp_alignment": "2.12",
+  "2050_temp_alignment": "1.58",
+  "2022_capital_loss_mid": "12.82",
+  "2022_capital_loss_high": "54.37",
+  "2030_capital_loss_mid": "18.68",
+  "2030_capital_loss_high": "63.59",
+  "2050_capital_loss_mid": "53.59",
+  "2050_capital_loss_high": "88.06"
 }
 ```
 
@@ -154,7 +161,7 @@ Year | The year of the metrics to retrieve
 
 
 ```shell
-curl "https://api.emmi.io/api/public/funds/2" \
+curl "https://api.emmi.io/api/public/funds/2/holdings" \
   -H "Authorization: Bearer myapikey"
 ```
 
@@ -167,16 +174,30 @@ curl "https://api.emmi.io/api/public/funds/2" \
     "isin": "US02079K3059",
     "company": "Alphabet Inc. Class A",
     "weighting": "50.0",
-    "emmi_score": "99.5",
-    "temperature_alignment": "1.5"
+    "2022_temp_alignment": "4.0",
+    "2022_capital_loss_mid": "3.45",
+    "2022_capital_loss_high": "28.1",
+    "2030_temp_alignment": "4.0",
+    "2030_capital_loss_mid": "5.67",
+    "2030_capital_loss_high": "61.4",
+    "2050_temp_alignment": "4.0",
+    "2050_capital_loss_mid": "27.02",
+    "2050_capital_loss_high": "99.99"
   },
   {
     "company_id": 2,
     "isin": "NZATME0002S8",
     "company": "a2 Milk Company Ltd.",
     "weighting": "50.0",
-    "emmi_score": "84.35",
-    "temperature_alignment": "1.71"
+    "2022_temp_alignment": "4.0",
+    "2022_capital_loss_mid": "0.42",
+    "2022_capital_loss_high": "4.63",
+    "2030_temp_alignment": "4.0",
+    "2030_capital_loss_mid": "0.68",
+    "2030_capital_loss_high": "13.03",
+    "2050_temp_alignment": "4.0",
+    "2050_capital_loss_mid": "4.3",
+    "2050_capital_loss_high": "87.19"
   }
 ]
 ```
@@ -191,8 +212,8 @@ This endpoint retrieves the holdings of a specific fund.
 
 Parameter | Description
 --------- | -----------
-Name | The name of the fund to create
-Year | The year of the fund to create
+ID | The name of the fund
+Year | The year of the holdings to retrieve
 
 
 ## Create a Specific Fund
