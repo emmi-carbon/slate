@@ -224,7 +224,7 @@ curl "https://api.emmi.io/api/public/funds" \
   -X POST \
   -H "Authorization: Bearer myapikey" \
   -H 'Content-Type: application/json' \
-  -d '{"name":"XYZ","year":2020, "aum: 200000000", companies": [{"isin":"US02079K3059","weighting":0.5},{"isin":"NZATME0002S8","weighting":0.5}]}'
+  -d '{"name":"XYZ","year":2020,"aum": "200000000","companies": [{"isin":"US02079K3059","weighting":0.5},{"isin":"NZATME0002S8","weighting":0.5}]}'
 ```
 
 > The above command returns JSON structured like this:
