@@ -224,7 +224,7 @@ curl "https://api.emmi.io/api/public/funds" \
   -X POST \
   -H "Authorization: Bearer myapikey" \
   -H 'Content-Type: application/json' \
-  -d '{"name":"XYZ","year":2020, "companies": [{"isin":"US02079K3059","weighting":0.5},{"isin":"NZATME0002S8","weighting":0.5}]}'
+  -d '{"name":"XYZ","year":2020, "aum: 200000000", companies": [{"isin":"US02079K3059","weighting":0.5},{"isin":"NZATME0002S8","weighting":0.5}]}'
 ```
 
 > The above command returns JSON structured like this:
@@ -250,6 +250,7 @@ Parameter | Description
 --------- | -----------
 Name | The name of the fund to create
 Year | The year of the fund to create
+AUM | Fund AUM amount. Optional parameter defaulted to $100,000,000
 Companies | The companies for a fund. Companies must be an array of objects containing an `isin` and  a `weighting`.
 
 
